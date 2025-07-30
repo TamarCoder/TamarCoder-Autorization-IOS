@@ -22,7 +22,8 @@ export default function Register() {
         <Image source={cover} style={styles.cover} />
 
         <View style={styles.main}>
-          <View>
+
+          <View style={styles.prev}>
             <TouchableOpacity
               style={styles.btn}
               onPress={() => router.push("/(tabs)/main")}
@@ -30,6 +31,7 @@ export default function Register() {
               <AntDesign name="arrowleft" size={24} color="black" />
             </TouchableOpacity>
           </View>
+          
           <View style={styles.forms}>
             <View style={styles.headline}>
               <Text style={styles.heading}>Create Account</Text>
@@ -92,6 +94,11 @@ const styles = StyleSheet.create({
     height: 1000,
     position: "absolute",
   },
+  prev: { 
+    top:'3%',
+    display:'flex',
+    justifyContent:'center',
+  },
 
   main: {
     width: "100%",
@@ -104,6 +111,7 @@ const styles = StyleSheet.create({
   btn: {
     width: "20%",
     height: 40,
+    padding:8,
   },
   forms: {
     width: "100%",

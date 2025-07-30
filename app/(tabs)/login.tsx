@@ -19,9 +19,8 @@ export default function Register() {
     <SafeAreaView style={styles.mainContianer}>
       <View style={styles.cover}>
         <Image source={cover} style={styles.cover} />
-
         <View style={styles.main}>
-          <View>
+          <View style={styles.prev}>
             <TouchableOpacity
               style={styles.btn}
               onPress={() => router.push("/(tabs)/main")}
@@ -75,6 +74,11 @@ const styles = StyleSheet.create({
     position: "absolute",
   },
 
+    prev: { 
+    top:'3%',
+    display:'flex',
+    justifyContent:'center',
+  },
   main: {
     width: "100%",
     height: "100%",
